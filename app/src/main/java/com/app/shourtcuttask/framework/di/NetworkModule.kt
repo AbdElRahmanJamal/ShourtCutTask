@@ -64,6 +64,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providesCoinPaprikaApi(retrofit: Retrofit): ComicApi =
+    fun providesComicApi(retrofit: Retrofit): ComicApi =
         retrofit.create(ComicApi::class.java)
 }

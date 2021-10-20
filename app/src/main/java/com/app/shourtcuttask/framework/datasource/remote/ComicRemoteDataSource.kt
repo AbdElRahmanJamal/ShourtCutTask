@@ -14,12 +14,12 @@ class ComicRemoteDataSource @Inject constructor(
 
 
     override suspend fun startRemoteApiCall(apiParameter: HashMap<String, Any>?): ComicDto {
-        var coinID = 1
+        var comicID = 1
         apiParameter?.let {
             if (it.getValue(BundleKeys.COMIC_ID_HASH_MAP_KEY) is Int)
-                coinID = it.getValue(BundleKeys.COMIC_ID_HASH_MAP_KEY) as Int
+                comicID = it.getValue(BundleKeys.COMIC_ID_HASH_MAP_KEY) as Int
         }
-        return api.getComicByID(coinID)
+        return api.getComicByID(comicID)
     }
 
     override suspend fun getComicByComicID(comicID: Int): ResponseState<ComicDto> {
