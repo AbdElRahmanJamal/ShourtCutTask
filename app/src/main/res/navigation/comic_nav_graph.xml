@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/comic_nav_graph"
+    app:startDestination="@id/comicFragment">
+
+    <fragment
+        android:id="@+id/comicFragment"
+        android:name="com.app.shourtcuttask.presentation.comic.ComicFragment"
+        android:label="ComicFragment" />
+    <fragment
+        android:id="@+id/searchComicFragment"
+        android:name="com.app.shourtcuttask.presentation.search.SearchComicFragment"
+        android:label="SearchComicFragment" />
+    <fragment
+        android:id="@+id/favoriteComicFragment"
+        android:name="com.app.shourtcuttask.presentation.favorite.FavoriteComicFragment"
+        android:label="FavoriteComicFragment" />
+</navigation>
